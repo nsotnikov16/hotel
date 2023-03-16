@@ -1,0 +1,146 @@
+.footer {
+    padding-top: 60px;
+    border-top: 1px solid $hr;
+    &__top {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr /* max-content */);
+    }
+
+    &__col {
+        max-width: 300px;
+        &_logo {
+            max-width: 318px;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            justify-self: center;
+        }
+    }
+
+    &__col_logo div {
+        font-size: 16px;
+        line-height: 140%;
+        color: $gray;
+        margin-top: 30px;
+    }
+
+    &__logo {
+        width: 300px;
+        height: 161px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    &__nav-title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 130%;
+        margin-bottom: 21px;
+    }
+
+    &__col_nav {
+        li {
+            margin-bottom: 12px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        a {
+            font-size: 16px;
+            line-height: 140%;
+            color: $gray;
+        }
+    }
+
+    &__block {
+        &-title {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 140%;
+            margin-bottom: 10px;
+        }
+
+        a.footer__block-text {
+            text-decoration: underline;
+            margin-bottom: 10px;
+            display: block;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        &-text {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 130%;
+        }
+        margin-bottom: 20px;
+
+        &_address {
+            .footer__block-text {
+                font-weight: 600;
+                font-size: 22px;
+                line-height: 150%;
+            }
+        }
+
+        .phone {
+            margin-bottom: 5px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__bottom {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 23px 0;
+        border-top: 1px solid $hr;
+    }
+
+    &__copyright {
+        font-size: 12px;
+        line-height: 140%;
+        color: $gray;
+    }
+
+    &__dev {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 12px;
+        line-height: 140%;
+        color: $gray;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 180px;
+            height: 23px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url(../img/vitamin.svg);
+            flex-shrink: 0;
+            margin-left: 10px;
+            opacity: 0.5;
+            filter: grayscale(1);
+            transition: opacity 0.2s ease-out;
+        }
+
+        &:hover {
+            &::after {
+                opacity: 1;
+                filter: none;
+            }
+        }
+    }
+
+    .phone {
+        display: block;
+    }
+}

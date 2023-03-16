@@ -1,0 +1,83 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url(../fonts/#{$file_name}.woff2) format("woff2"), url(../fonts/#{$file_name}.woff) format("woff");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+$main: #192040;
+$gray-bg: #f8fbff;
+$gray: #828299;
+$black: #1e2326;
+$blue: #2eb4ff;
+$green: #67df73;
+$hr: #EDEDF2;
+$linear-green: linear-gradient(121.12deg, #6ad474 -10.29%, #62ff71 105.05%),
+  linear-gradient(121.12deg, #00adef -10.29%, #66d3fd 105.05%);
+$linear-blue: linear-gradient(121.12deg, #00adef -10.29%, #66d3fd 105.05%);
+
+@import "fonts";
+
+@import "normalize";
+
+body {
+  font-family: "Gilroy";
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  scrollbar-width: 5px;
+  &::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 20px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: white;
+  }
+}
+.page {
+  min-height: 100vh; //
+  color: $main;
+  background-color: $gray-bg;
+  overflow: hidden;
+
+  &_inner {
+  }
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1430px;
+
+    @media (max-width: 1220px) {
+      padding: 0 30px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 0 24px;
+    }
+  }
+
+  &__title {
+  }
+}
+
+/* Другое */
+@import "other";
+
+/* Контент */
+@import "content";
+
+/* Модалки */
+@import "popups";
+
+/* Спойлеры */
+@import "spoiler";
+
+/* Шапка */
+@import "header";
+
+/* Подвал */
+@import "footer";

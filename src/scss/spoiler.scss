@@ -1,0 +1,35 @@
+.spoiler {
+
+ 
+  * {
+    user-select: none;
+  }
+  &-top {
+    cursor: pointer;
+  }
+  &-bottom {
+    overflow: hidden;
+    visibility: hidden;
+    max-height: 0;
+    transition: 0.2s ease-in-out;
+    transition-property: visibility, max-height, padding;
+    &:not(.spoiler-open .spoiler-bottom) {
+      padding-top: 0;
+      padding-bottom: 0;
+      &.popular__item-bottom {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  &-open {
+    .spoiler-bottom {
+      overflow: visible;
+      visibility: visible;
+      max-height: initial;
+    }
+
+    
+  }
+}

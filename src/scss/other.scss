@@ -1,0 +1,76 @@
+.section {
+  &__title {
+  }
+
+  &__subtitle {
+  }
+}
+
+.phone {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 130%;
+}
+
+.logo {
+  background-image: url(../img/logo.png);
+  display: block;
+}
+
+.social {
+  a {
+    transition: background-color 0.2s ease-out;
+    &:hover {
+      background: $gray;
+    }
+    svg {
+    }
+  }
+
+  .viber {
+    background: #7f3cd3;
+    svg {
+      transform: translate(0, 1px);
+    }
+
+    &:hover svg {
+      fill: #7f3cd3;
+    }
+  }
+  .whatsapp {
+    background: #3cd382;
+    &:hover svg {
+      fill: #3cd382;
+    }
+  }
+  .vk {
+    background: #0077ff;
+    &:hover svg {
+      fill: #0077ff;
+    }
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background: $blue;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  padding: 14px 22px;
+}
+
+.btn-up {
+}
+
+[data-src],
+[data-srcset] {
+  background-image: url(../img/loader.gif);
+  min-height: 100px;
+  background-size: 64px 64px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
