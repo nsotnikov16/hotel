@@ -1,0 +1,1076 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url(../fonts/Gilroy-Regular.woff2) format("woff2"), url(../fonts/Gilroy-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url(../fonts/Gilroy-Medium.woff2) format("woff2"), url(../fonts/Gilroy-Medium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url(../fonts/Gilroy-Semibold.woff2) format("woff2"), url(../fonts/Gilroy-Semibold.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url(../fonts/Gilroy-Bold.woff2) format("woff2"), url(../fonts/Gilroy-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SignPainter";
+  font-display: swap;
+  src: url(../fonts/SignPainter.woff2) format("woff2"), url(../fonts/SignPainter.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+     ========================================================================== */
+/**
+   * Remove the margin in all browsers.
+   */
+body {
+  margin: 0;
+}
+
+/**
+   * Render the `main` element consistently in IE.
+   */
+main {
+  display: block;
+}
+
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+     ========================================================================== */
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+     ========================================================================== */
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+a {
+  background-color: transparent;
+}
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+   * Add the correct font size in all browsers.
+   */
+small {
+  font-size: 80%;
+}
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+     ========================================================================== */
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+img {
+  border-style: none;
+}
+
+/* Forms
+     ========================================================================== */
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+   * Correct the padding in Firefox.
+   */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+textarea {
+  overflow: auto;
+}
+
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+     ========================================================================== */
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+details {
+  display: block;
+}
+
+/*
+   * Add the correct display in all browsers.
+   */
+summary {
+  display: list-item;
+}
+
+/* Misc
+     ========================================================================== */
+/**
+   * Add the correct display in IE 10+.
+   */
+template {
+  display: none;
+}
+
+/**
+   * Add the correct display in IE 10.
+   */
+[hidden] {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: initial;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #192040;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1e2326;
+}
+
+body {
+  font-family: "Gilroy";
+  scrollbar-width: 5px;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 20px;
+}
+body::-webkit-scrollbar-track {
+  background: white;
+}
+
+.page {
+  min-height: 100vh;
+  color: #192040;
+  background-color: #f8fbff;
+  overflow: hidden;
+}
+.page__container {
+  margin: 0 auto;
+  max-width: 1430px;
+}
+@media (max-width: 1220px) {
+  .page__container {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 767px) {
+  .page__container {
+    padding: 0 24px;
+  }
+}
+/* Другое */
+.section {
+  padding: 80px 0 105px;
+}
+.section__title {
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.section__title_white {
+  color: white;
+}
+.section__subtitle {
+  font-family: "SignPainter";
+  font-size: 35px;
+  color: #2eb4ff;
+  margin-bottom: 10px;
+  line-height: 100%;
+}
+.section_services {
+  background-size: cover;
+}
+
+.phone {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 130%;
+}
+
+.logo {
+  background-image: url(../img/logo.png);
+  display: block;
+}
+
+.social a {
+  transition: background-color 0.2s ease-out;
+}
+.social a:hover {
+  background: #828299;
+}
+.social .viber {
+  background: #7f3cd3;
+}
+.social .viber svg {
+  transform: translate(0, 1px);
+}
+.social .viber:hover svg {
+  fill: #7f3cd3;
+}
+.social .whatsapp {
+  background: #3cd382;
+}
+.social .whatsapp:hover svg {
+  fill: #3cd382;
+}
+.social .vk {
+  background: #0077ff;
+}
+.social .vk:hover svg {
+  fill: #0077ff;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background: #2eb4ff;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  padding: 14px 22px;
+}
+
+[data-src],
+[data-srcset] {
+  background-image: url(../img/loader.gif);
+  min-height: 100px;
+  background-size: 64px 64px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.swiper-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.swiper-bottom .swiper-scrollbar {
+  height: 2px;
+  position: static;
+  cursor: pointer;
+}
+.swiper-bottom .swiper-scrollbar-drag {
+  background: #192040;
+}
+.swiper-bottom .swiper-button-next,
+.swiper-bottom .swiper-button-prev {
+  position: static;
+  color: #828299;
+  margin-top: 0;
+}
+.swiper-bottom .swiper-button-next::after,
+.swiper-bottom .swiper-button-prev::after {
+  font-size: 18px;
+}
+.swiper-bottom .swiper-slide {
+  height: auto;
+}
+.swiper-bottom-arrows {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  margin-right: 50px;
+  padding: 0 8px;
+  width: 106px;
+}
+.swiper-bottom-more {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  text-decoration-line: underline;
+  margin-left: 50px;
+  flex-shrink: 0;
+}
+
+/* Контент */
+.content {
+  font-size: 18px;
+  line-height: 140%;
+}
+.content p {
+  margin-bottom: 10px;
+}
+
+/* Модалки */
+.popup {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(30, 35, 38, 0.7);
+  overflow: auto;
+}
+.popup.popup_opened {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+  z-index: 999999999999;
+}
+.popup__container {
+  position: relative;
+  padding-top: 10px;
+}
+.popup__close {
+  position: absolute;
+  top: 22px;
+  cursor: pointer;
+  right: 12px;
+  font-size: 30px;
+  color: black;
+  background-image: url(../img/close.svg);
+  width: 27px;
+  height: 27px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: filter 0.2s ease-out;
+}
+.popup__close:hover {
+  filter: brightness(0.1);
+}
+@media (max-width: 560px) {
+  .popup__close {
+    width: 20px;
+    height: 20px;
+  }
+}
+.popup__img {
+  max-width: 50vw;
+  max-height: 70vh;
+  object-fit: contain;
+  object-position: top center;
+  border-radius: 5px;
+  padding: 10px;
+  background: white;
+}
+@media (max-width: 1180px) {
+  .popup__img {
+    max-width: 70vw;
+  }
+}
+@media (max-width: 768px) {
+  .popup__img {
+    max-width: 85vw;
+  }
+}
+.popup#photo .popup__close {
+  filter: brightness(0.1);
+}
+
+/* Спойлеры */
+.spoiler * {
+  user-select: none;
+}
+.spoiler-top {
+  cursor: pointer;
+}
+.spoiler-bottom {
+  overflow: hidden;
+  visibility: hidden;
+  max-height: 0;
+  transition: 0.2s ease-in-out;
+  transition-property: visibility, max-height, padding;
+}
+.spoiler-bottom:not(.spoiler-open .spoiler-bottom) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.spoiler-bottom:not(.spoiler-open .spoiler-bottom).popular__item-bottom {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.spoiler-open .spoiler-bottom {
+  overflow: visible;
+  visibility: visible;
+  max-height: initial;
+}
+
+/* Шапка */
+.header {
+  background: white;
+  padding: 10px 0 12px;
+  border-bottom: 1px solid #ededf2;
+}
+.header__container {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+}
+.header__contacts {
+  grid-column: 2/4;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ededf2;
+  padding-bottom: 8px;
+}
+.header__nav {
+  padding-right: 40px;
+}
+.header__nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.header__nav a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+}
+.header__nav a.active, .header__nav a:hover {
+  border-bottom: 2px solid #08a3ea;
+}
+.header__add {
+  padding-left: 40px;
+  border-left: 1px solid #ededf2;
+  display: flex;
+}
+.header__nav, .header__add {
+  margin-top: 11px;
+}
+.header__category {
+  display: flex;
+  align-items: center;
+  max-width: 206px;
+  margin-right: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+}
+.header__category::before {
+  content: "";
+  flex-shrink: 0;
+  display: block;
+  width: 27px;
+  height: 27px;
+  background-image: url(../img/category.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+}
+.header__block-title {
+  color: #828299;
+  font-size: 12px;
+  line-height: 140%;
+}
+.header__block-text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+}
+.header__block-text,
+.header__block .phone {
+  margin-top: 10px;
+}
+.header__block a.header__block-text {
+  text-decoration: underline;
+  display: block;
+}
+.header__block_phones .phone {
+  margin-right: 50px;
+}
+.header__block_phones .phone:last-child {
+  margin-right: 0;
+}
+.header__block .phone {
+  display: inline-block;
+}
+.header__logo {
+  width: 206px;
+  background-size: 100%;
+  height: 112px;
+  grid-row: 1/3;
+  background-repeat: no-repeat;
+  margin-right: 32px;
+  margin-top: 7px;
+}
+.header__mobile {
+  display: none;
+}
+
+/* Подвал */
+.footer {
+  padding-top: 60px;
+  border-top: 1px solid #ededf2;
+}
+.footer__top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.footer__col {
+  max-width: 300px;
+}
+.footer__col_logo {
+  max-width: 318px;
+}
+.footer__col:nth-child(2), .footer__col:nth-child(3) {
+  justify-self: center;
+}
+.footer__col_logo div {
+  font-size: 16px;
+  line-height: 140%;
+  color: #828299;
+  margin-top: 30px;
+}
+.footer__logo {
+  width: 300px;
+  height: 161px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.footer__nav-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+  margin-bottom: 21px;
+}
+.footer__col_nav li {
+  margin-bottom: 12px;
+}
+.footer__col_nav li:last-child {
+  margin-bottom: 0;
+}
+.footer__col_nav a {
+  font-size: 16px;
+  line-height: 140%;
+  color: #828299;
+}
+.footer__block {
+  margin-bottom: 20px;
+}
+.footer__block-title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  margin-bottom: 10px;
+}
+.footer__block a.footer__block-text {
+  text-decoration: underline;
+  margin-bottom: 10px;
+  display: block;
+}
+.footer__block a.footer__block-text:last-of-type {
+  margin-bottom: 0;
+}
+.footer__block-text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+}
+.footer__block_address .footer__block-text {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 150%;
+}
+.footer__block .phone {
+  margin-bottom: 5px;
+}
+.footer__block .phone:last-of-type {
+  margin-bottom: 0;
+}
+.footer__bottom {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 0;
+  border-top: 1px solid #ededf2;
+}
+.footer__copyright {
+  font-size: 12px;
+  line-height: 140%;
+  color: #828299;
+}
+.footer__dev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 140%;
+  color: #828299;
+}
+.footer__dev::after {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 23px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../img/vitamin.svg);
+  flex-shrink: 0;
+  margin-left: 10px;
+  opacity: 0.5;
+  filter: grayscale(1);
+  transition: opacity 0.2s ease-out;
+}
+.footer__dev:hover::after {
+  opacity: 1;
+  filter: none;
+}
+.footer .phone {
+  display: block;
+}
+
+/* Hero Block */
+.hero {
+  margin-top: 60px;
+  min-height: 532px;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  padding: 8%;
+}
+.hero h1 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 120%;
+  max-width: 710px;
+  margin-bottom: 61px;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+/* Об отеле */
+.about {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.about__left {
+  width: 48.2%;
+  position: relative;
+}
+.about__right {
+  width: 49.6%;
+}
+.about__photo1 {
+  max-width: 475px;
+  border-radius: 20px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 2;
+}
+.about__photo2 {
+  max-width: 423px;
+  border-radius: 20px;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  z-index: 3;
+}
+.about__svg1 {
+  position: absolute;
+  z-index: 1;
+  right: -90px;
+  top: 70px;
+  z-index: 1;
+}
+.about__svg2 {
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+}
+
+/* Услуги отеля */
+.services {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 25px;
+  max-width: 818px;
+}
+.services__item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0 20px;
+}
+.services__item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  grid-row: 1/3;
+}
+.services__item h4 {
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 8px;
+}
+.services__item p {
+  font-size: 16px;
+  line-height: 140%;
+  color: white;
+}
+
+/* Номера */
+.rooms__item-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 30px;
+  position: relative;
+  z-index: 2;
+}
+.rooms__item-info {
+  border: 2px solid #e3eaf4;
+  border-top: 0;
+  padding: 50px 30px 20px;
+  overflow: hidden;
+  border-radius: 0 0 30px 30px;
+  transform: translateY(-30px);
+  position: relative;
+  z-index: 1;
+}
+.rooms__item-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+  margin-bottom: 5px;
+  display: block;
+}
+.rooms__item-desc {
+  font-size: 16px;
+  line-height: 140%;
+  color: #828299;
+}
+.rooms__item-bottom {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 30px;
+}
+.rooms__item-price {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+}
+/* Акции */
+.stocks__item {
+  display: block;
+}
+.stocks__item-top {
+  position: relative;
+  z-index: 2;
+}
+.stocks__item-img {
+  border-radius: 30px;
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  z-index: 2;
+  position: relative;
+}
+.stocks__item-labels {
+  position: absolute;
+  left: 40px;
+  bottom: 25px;
+  right: 40px;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+}
+.stocks__item-labels .btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.stocks__item-labels .btn:last-child {
+  margin-right: 0;
+}
+.stocks__item-bottom {
+  transform: translateY(-30px);
+  padding: 50px 40px 25px;
+  border: 2px solid #e3eaf4;
+  border-top: 0;
+  border-radius: 0 0 30px 30px;
+  position: relative;
+  z-index: 1;
+}
+.stocks__item-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+}
