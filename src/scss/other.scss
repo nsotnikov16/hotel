@@ -90,3 +90,52 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.swiper-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .swiper-scrollbar {
+    height: 2px;
+    position: static;
+    cursor: pointer;
+    &-drag {
+      background: $main;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: static;
+    color: $gray;
+    margin-top: 0;
+
+    &::after {
+      font-size: 18px;
+    }
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  &-arrows {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    margin-right: 50px;
+    padding: 0 8px;
+    width: 106px;
+  }
+
+  &-more {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    text-decoration-line: underline;
+    margin-left: 50px;
+    flex-shrink: 0;
+  }
+}

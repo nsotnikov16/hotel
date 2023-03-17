@@ -1,4 +1,4 @@
- // Lazyload
+// Lazyload
 const lazyImages = document.querySelectorAll('img[data-src], [data-srcset]')
 if (lazyImages.length > 0) {
     lazyImages.forEach(img => {
@@ -197,4 +197,30 @@ window.addEventListener("DOMContentLoaded", function () {
         input.addEventListener("keydown", mask, false)
     });
 });
- 
+
+
+const swiperRooms = new Swiper('.swiper.rooms', {
+    slidesPerView: 4,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: '.swiper.rooms .swiper-button-next',
+        prevEl: '.swiper.rooms .swiper-button-prev',
+    },
+    scrollbar: {
+        el: '.swiper.rooms .swiper-scrollbar',
+        draggable: true,
+    },
+});
+
+const swiperStocks = new Swiper('.swiper.stocks', {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: '.swiper.stocks .swiper-button-next',
+        prevEl: '.swiper.stocks .swiper-button-prev',
+    },
+    scrollbar: {
+        el: '.swiper.stocks .swiper-scrollbar',
+        draggable: true,
+    },
+});
