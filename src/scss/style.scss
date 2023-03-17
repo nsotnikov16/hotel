@@ -14,7 +14,7 @@ $gray: #828299;
 $black: #1e2326;
 $blue: #2eb4ff;
 $green: #67df73;
-$hr: #EDEDF2;
+$hr: #ededf2;
 $linear-green: linear-gradient(121.12deg, #6ad474 -10.29%, #62ff71 105.05%),
   linear-gradient(121.12deg, #00adef -10.29%, #66d3fd 105.05%);
 $linear-blue: linear-gradient(121.12deg, #00adef -10.29%, #66d3fd 105.05%);
@@ -81,3 +81,10 @@ body {
 
 /* Подвал */
 @import "footer";
+
+/* Об отеле */
+@import "about";
+
+/* Услуги отеля */
+
+@import "services";

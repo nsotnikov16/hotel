@@ -4,8 +4,12 @@
 	<div class="page">
 		<!-- Шапка -->
 		@@include('html/header.html', {})
-		<main style="height: 400px">
+		<main>
+			<!--  Об отеле -->
+			@@include('html/about-home.html', {})
 
+			<!--  Услуги отеля -->
+			@@include('html/services-home.html', {})
 		</main>
 		<!-- Подвал -->
 		@@include('html/footer.html', {})

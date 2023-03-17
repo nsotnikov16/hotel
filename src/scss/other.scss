@@ -1,8 +1,24 @@
 .section {
+  padding: 80px 0 105px;
   &__title {
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 20px;
+    &_white {
+      color: white;
+    }
   }
 
   &__subtitle {
+    font-family: "SignPainter";
+    font-size: 35px;
+    color: $blue;
+    margin-bottom: 10px;
+    line-height: 100%;
+  }
+
+  &_services {
+    background-size: cover;
   }
 }
 

@@ -1,4 +1,4 @@
-/* // Lazyload
+ // Lazyload
 const lazyImages = document.querySelectorAll('img[data-src], [data-srcset]')
 if (lazyImages.length > 0) {
     lazyImages.forEach(img => {
@@ -197,4 +197,4 @@ window.addEventListener("DOMContentLoaded", function () {
         input.addEventListener("keydown", mask, false)
     });
 });
- */
+ 

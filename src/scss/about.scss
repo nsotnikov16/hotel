@@ -1,0 +1,44 @@
+.about {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+
+    &__left {
+        width: 48.2%;
+        position: relative;
+    }
+
+    &__right {
+        width: 49.6%;
+    }
+
+    &__photo1 {
+        max-width: 475px;
+        border-radius: 20px;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        z-index: 2;
+    }
+    &__photo2 {
+        max-width: 423px;
+        border-radius: 20px;
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        z-index: 3;
+    }
+    &__svg1 {
+        position: absolute;
+        z-index: 1;
+        
+        right: -90px;
+        top: 70px;
+        z-index: 1;
+    }
+    &__svg2 {
+        position: absolute;
+        bottom: -50px;
+        left: 20px
+    }
+}
