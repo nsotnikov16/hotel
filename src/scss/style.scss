@@ -19,6 +19,8 @@ $linear-green: linear-gradient(121.12deg, #6ad474 -10.29%, #62ff71 105.05%),
   linear-gradient(121.12deg, #00adef -10.29%, #66d3fd 105.05%);
 $linear-blue: linear-gradient(121.12deg, #00adef -10.29%, #66d3fd 105.05%);
 
+@import 'swiper-bundle.min';
+
 @import "fonts";
 
 @import "normalize";

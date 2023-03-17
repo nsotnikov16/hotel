@@ -1,4 +1,9 @@
 .rooms {
+    .swiper {
+        * {
+            user-select: none;
+        }
+    }
     &__item {
         &-img {
             width: 100%;

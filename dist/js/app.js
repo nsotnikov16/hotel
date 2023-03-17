@@ -202,6 +202,8 @@ window.addEventListener("DOMContentLoaded", function () {
 const swiperRooms = new Swiper('.swiper.rooms', {
     slidesPerView: 4,
     spaceBetween: 10,
+    /* loop: true, */
+    freeMode: true,
     navigation: {
         nextEl: '.swiper.rooms .swiper-button-next',
         prevEl: '.swiper.rooms .swiper-button-prev',
@@ -223,4 +225,5 @@ const swiperStocks = new Swiper('.swiper.stocks', {
         el: '.swiper.stocks .swiper-scrollbar',
         draggable: true,
     },
+   /*  loop: true, */
 });
