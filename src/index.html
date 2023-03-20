@@ -16,10 +16,17 @@
 			@@include('html/services-home.html', {})
 
 			<!-- Наши номера -->
-			@@include('html/rooms.html', {})
+			@@include('html/rooms-swiper.html', {})
 
 			<!-- Акции -->
-			@@include('html/stocks.html', {})
+			<section class="section" style="padding-top: 0">
+				<div class="page__container">
+					<p class="section__subtitle">Акции</p>
+					<h2 class="section__title">Специальные предложения</h2>
+					@@include('html/stocks.html', {})
+				</div>
+			</section>
+		
 		</main>
 		<!-- Подвал -->
 		@@include('html/footer.html', {})

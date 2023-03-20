@@ -1,0 +1,53 @@
+.breadcrumbs {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    ul {
+        display: flex;
+        align-items: center;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 28px;
+
+        &::after {
+            content: "/";
+            display: inline;
+            font-size: 14px;
+            color: $gray;
+            transform: translateX(14px);
+        }
+
+        &:first-child {
+            svg {
+                width: 13.48px;
+                height: 12px;
+                fill: $gray;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+            &::after {
+                content: initial;
+            }
+
+            a {
+                color: $blue;
+            }
+        }
+    }
+
+    a {
+        font-size: 14px;
+        color: $gray;
+        &:hover {
+            svg {
+                fill: $blue;
+            }
+            color: $blue;
+        }
+    }
+}

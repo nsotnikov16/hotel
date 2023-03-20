@@ -19,7 +19,8 @@ $linear-green: linear-gradient(121.12deg, #6ad474 -10.29%, #62ff71 105.05%),
   linear-gradient(121.12deg, #00adef -10.29%, #66d3fd 105.05%);
 $linear-blue: linear-gradient(121.12deg, #00adef -10.29%, #66d3fd 105.05%);
 
-@import 'swiper-bundle.min';
+@import "swiper-bundle.min";
+@import "lightgallery.min";
 
 @import "fonts";
 
@@ -63,6 +64,9 @@ body {
   }
 
   &__title {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 130%;
   }
 }
 
@@ -81,6 +85,9 @@ body {
 /* Шапка */
 @import "header";
 
+/* Хлебные крошки */
+@import "breadcrumbs";
+
 /* Подвал */
 @import "footer";
 
@@ -91,9 +98,12 @@ body {
 @import "about";
 
 /* Услуги отеля */
-@import "services";
+@import "services-home";
 
-/* Номера */
+/* Номера (swiper)*/
+@import "rooms-swiper";
+
+/* Номера (страница) */
 @import "rooms";
 
 /* Акции */

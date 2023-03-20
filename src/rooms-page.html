@@ -1,0 +1,30 @@
+@@include('html/head.html', {"title": "Номера", "dop": ""})
+
+<body>
+    <div class="page">
+        <!-- Шапка -->
+        @@include('html/header.html', {})
+        <main>
+            @@include('html/breadcrumbs.html', {"link": "Номера", "add": ""})
+
+            @@include('html/rooms.html', {})
+
+            <section class="section">
+                <div class="page__container">
+                    <h2 class="section__title">Специальные предложения</h2>
+                    @@include('html/stocks.html', {})
+                </div>
+            </section>
+
+        </main>
+        <!-- Подвал -->
+        @@include('html/footer.html', {})
+
+        <!-- Модалки -->
+        @@include('html/popups.html', {})
+    </div>
+
+    @@include('html/scripts.html', {})
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+@@include('html/head.html', {"title": "Номера", "dop": ""})
+
+<body>
+    <div class="page">
+        <!-- Шапка -->
+        @@include('html/header.html', {})
+        <main>
+            @@include('html/breadcrumbs.html', {"link": "Шаблон по умолчанию", "add": ""})
+            <div class="page__container">
+                <h1 class="page__title">Пример дефолтного шаблона страницы</h1>
+            </div>
+        </main>
+        <!-- Подвал -->
+        @@include('html/footer.html', {})
+
+        <!-- Модалки -->
+        @@include('html/popups.html', {})
+    </div>
+
+    @@include('html/scripts.html', {})
+</body>
+
+</html>
