@@ -1,7 +1,7 @@
 
 
 // Lazyload
-const lazyImages = document.querySelectorAll('img[data-src], [data-srcset]')
+const lazyImages = document.querySelectorAll('[data-src], [data-srcset]')
 if (lazyImages.length > 0) {
     lazyImages.forEach(img => {
         function showImg() {
@@ -259,4 +259,29 @@ if (roomPhotos.length) {
         })
     })
 }
+
+
+
+const detailSwiperThumbs = new Swiper(".detail__swiper-thumbs", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+
+});
+const detailSwiper = new Swiper(".detail__swiper", {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".detail__swiper .swiper-button-next",
+        prevEl: ".detail__swiper .swiper-button-prev",
+    },
+    thumbs: {
+        swiper: detailSwiperThumbs,
+    },
+    pagination: {
+        el: '.detail__swiper .swiper-pagination',
+        type: 'fraction',
+    },
+});
+
 

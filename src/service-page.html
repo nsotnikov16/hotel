@@ -1,0 +1,86 @@
+@@include('html/head.html', {"title": "Услуга Тренажерный зал", "dop": ""})
+
+<body>
+    <div class="page">
+        <!-- Шапка -->
+        @@include('html/header.html', {})
+        <main>
+            @@include('html/breadcrumbs.html', {"link": "Тренажерный зал", "add": "<li><a href='./services-page.html'>Услуги</a></li>"})
+
+            <div class="detail">
+                <div class="page__container detail__container">
+                    <div class="detail__photos">
+                        <div class="detail__swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/services/a1.png" class="detail__photo">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/services/a2.png" class="detail__photo">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/services/a3.png" class="detail__photo">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/services/a4.png" class="detail__photo">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="detail__swiper-thumbs swiper" thumbsSlider="">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/services/a1.png" class="detail__photo">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/services/a2.png" class="detail__photo">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/services/a3.png" class="detail__photo">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/services/a4.png" class="detail__photo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail__info">
+                        <h1 class="page__title">Тренажерный зал</h1>
+                        <div class="content">
+                            <p>Просторный тренажерный зал для наших постояльцев. Оснащен беговой дорожкой, атлетическим
+                                центром, гимнастической скамьей, велотренажерами и вибромассажером;</p>
+                            <h3>Время работы:</h3>
+                            <p>Зал открыт круглосуточно</p>
+                            <h3>Стоимость:</h3>
+                            <p>Бесплатно, включено в стоимость номера</p>
+                            <div class="detail__links">
+                                <a href="#" class="with-arrow">Правила предоставления гостиничных услуг в РФ в формате .docx</a>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <!-- Другие номера -->
+            <section class="section">
+                <div class="page__container">
+                    <h2 class="section__title">Другие номера</h2>
+                    @@include('html/rooms-swiper.html', {})
+                </div>
+            </section>
+
+        </main>
+        <!-- Подвал -->
+        @@include('html/footer.html', {})
+
+        <!-- Модалки -->
+        @@include('html/popups.html', {})
+    </div>
+
+    @@include('html/scripts.html', {})
+</body>
+
+</html>

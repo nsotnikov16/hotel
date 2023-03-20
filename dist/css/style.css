@@ -2352,13 +2352,50 @@ body::-webkit-scrollbar-track {
   display: none;
 }
 
+.col2 li {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 30px;
+  padding: 30px 0;
+  border-bottom: 2px solid #ededf2;
+}
+.col2 li > *:first-child {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+}
+.col2 li:last-child {
+  border-bottom: none;
+}
+
 /* Контент */
 .content {
   font-size: 18px;
   line-height: 140%;
 }
 .content p {
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.content a {
+  font-size: 16px;
+  color: #2eb4ff;
+}
+.content a.with-arrow {
+  display: flex;
+  align-items: center;
+}
+.content a.with-arrow::after {
+  content: "";
+  display: inline-block;
+  margin-left: 12px;
+  background-image: url(../img/arrow.svg);
+  width: 6px;
+  height: 11px;
+  background-size: 6px 11px;
+  transform: translateY(1px);
+}
+.content a:hover {
+  text-decoration: underline;
 }
 
 /* Модалки */
@@ -2435,6 +2472,9 @@ body::-webkit-scrollbar-track {
 }
 
 /* Спойлеры */
+.spoiler {
+  margin-bottom: 20px;
+}
 .spoiler * {
   user-select: none;
 }
@@ -2445,16 +2485,13 @@ body::-webkit-scrollbar-track {
   overflow: hidden;
   visibility: hidden;
   max-height: 0;
-  transition: 0.2s ease-in-out;
+  padding: 0;
+  transition: 0.3s ease-in-out;
   transition-property: visibility, max-height, padding;
 }
 .spoiler-bottom:not(.spoiler-open .spoiler-bottom) {
   padding-top: 0;
   padding-bottom: 0;
-}
-.spoiler-bottom:not(.spoiler-open .spoiler-bottom).popular__item-bottom {
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
 .spoiler-open .spoiler-bottom {
   overflow: visible;
@@ -2806,7 +2843,7 @@ body::-webkit-scrollbar-track {
   left: 20px;
 }
 
-/* Услуги отеля */
+/* Услуги отеля на главной */
 .services-home {
   margin-top: 35px;
   display: grid;
@@ -2837,7 +2874,45 @@ body::-webkit-scrollbar-track {
   color: white;
 }
 
+/* Услуги (на странице Услуги) */
+.services__title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 130%;
+}
+.services__list {
+  margin: 20px 0 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 230px);
+  gap: 10px;
+}
+.services__item {
+  background: #fffefc;
+  border: 2px solid #ededf2;
+  border-radius: 50px;
+}
+.services__item a {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+}
+.services__img {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.services__name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  margin-left: 15px;
+}
+
 /* Номера (swiper)*/
+.rooms-swiper {
+  margin-top: 30px;
+}
 .rooms-swiper .swiper * {
   user-select: none;
 }
@@ -2895,7 +2970,7 @@ body::-webkit-scrollbar-track {
 .room__photos {
   width: 100%;
   height: 100%;
-  max-height: 306px;
+  max-height: 315px;
   border-radius: 10px 0 0 10px;
   overflow: hidden;
 }
@@ -2940,6 +3015,7 @@ body::-webkit-scrollbar-track {
   font-size: 25px;
   line-height: 140%;
   margin-bottom: 15px;
+  display: block;
 }
 .room__desc {
   font-size: 16px;
@@ -3013,6 +3089,9 @@ body::-webkit-scrollbar-track {
 }
 
 /* Акции */
+.stocks {
+  margin-top: 30px;
+}
 .stocks__item {
   display: block;
 }
@@ -3058,4 +3137,165 @@ body::-webkit-scrollbar-track {
   font-weight: 600;
   font-size: 18px;
   line-height: 130%;
+}
+
+/* Детальная страница */
+.detail__container {
+  display: grid;
+  grid-template-columns: 58% 1fr;
+  gap: 40px 60px;
+}
+.detail__photos {
+  height: fit-content;
+}
+.detail__swiper {
+  border-radius: 10px;
+  height: 562px;
+}
+.detail__swiper .swiper-pagination-fraction {
+  color: white;
+}
+.detail__swiper iframe {
+  width: 100%;
+  height: 100%;
+}
+.detail__swiper .swiper-button-next,
+.detail__swiper .swiper-button-prev {
+  background: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.detail__swiper .swiper-button-next::after,
+.detail__swiper .swiper-button-prev::after {
+  font-size: 16px;
+}
+.detail__swiper-thumbs {
+  margin-top: 10px;
+  height: 130px;
+}
+.detail__swiper-thumbs .swiper-slide {
+  border-radius: 6.5px;
+  overflow: hidden;
+  border: none;
+  transition: border 0.15s ease-in-out;
+  cursor: pointer;
+}
+.detail__swiper-thumbs .swiper-slide-thumb-active {
+  position: relative;
+  border: 3px solid #2eb4ff;
+}
+.detail__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  z-index: 1;
+  position: relative;
+}
+.detail__info {
+  grid-row: 1/3;
+  grid-column: 2/3;
+}
+.detail__info .content {
+  margin-top: 30px;
+}
+.detail__detailed {
+  margin-top: 20px;
+}
+.detail__contact {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.detail__contact .btn {
+  padding: 14px 30px;
+}
+.detail__tel {
+  display: flex;
+  margin-left: 50px;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 16px;
+}
+.detail__tel svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 16px;
+}
+.detail__links {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.detail__links > * {
+  margin-bottom: 5px;
+}
+.detail__links > *:last-child {
+  margin-bottom: 0;
+}
+.detail .content h3 {
+  padding: 15px 0 10px;
+}
+.detail__spoiler {
+  border-radius: 30px;
+  border: 2px solid #ededf2;
+}
+.detail__spoiler .spoiler-top {
+  padding-top: 21px;
+  padding-bottom: 21px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.detail__spoiler .spoiler-top::after {
+  content: "";
+  display: inline-block;
+  margin-left: 12px;
+  background-image: url(../img/arrow.svg);
+  width: 7px;
+  height: 14px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transform: rotate(90deg) translateY(1px);
+  filter: brightness(0%);
+  transition: transform 0.2s ease-in;
+}
+.detail__spoiler .spoiler-bottom {
+  height: fit-content;
+}
+.detail__spoiler.spoiler-open .spoiler-top::after {
+  transform: rotate(-90deg) translateY(1px);
+}
+.detail__spoiler .spoiler-top, .detail__spoiler.spoiler-open .spoiler-bottom {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.link-3d {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+  background: linear-gradient(0deg, rgba(23, 23, 38, 0.6), rgba(23, 23, 38, 0.6));
+}
+.link-3d:hover {
+  background: linear-gradient(0deg, rgba(23, 23, 38, 0.6), rgb(23, 23, 38));
+}
+.link-3d svg {
+  width: 40px;
+  height: 40px;
 }

@@ -97,8 +97,11 @@ body {
 /* Об отеле */
 @import "about";
 
-/* Услуги отеля */
+/* Услуги отеля на главной */
 @import "services-home";
+
+/* Услуги (на странице Услуги) */
+@import "services";
 
 /* Номера (swiper)*/
 @import "rooms-swiper";
@@ -108,3 +111,6 @@ body {
 
 /* Акции */
 @import "stocks";
+
+/* Детальная страница */
+@import "detail";

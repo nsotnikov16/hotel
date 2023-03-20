@@ -3,6 +3,29 @@
     line-height: 140%;
 
     p {
-        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    a {
+        font-size: 16px;
+        color: $blue;
+        &.with-arrow {
+            display: flex;
+            align-items: center;
+            &::after {
+                content: '';
+                display: inline-block;
+                margin-left: 12px;
+                background-image: url(../img/arrow.svg);
+                width: 6px;
+                height: 11px;
+                background-size: 6px 11px;
+                transform: translateY(1px);
+            }
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }

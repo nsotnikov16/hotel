@@ -1,5 +1,5 @@
 .spoiler {
-
+  margin-bottom: 20px;
  
   * {
     user-select: none;
@@ -11,15 +11,12 @@
     overflow: hidden;
     visibility: hidden;
     max-height: 0;
-    transition: 0.2s ease-in-out;
+    padding: 0;
+    transition: 0.3s ease-in-out;
     transition-property: visibility, max-height, padding;
     &:not(.spoiler-open .spoiler-bottom) {
       padding-top: 0;
       padding-bottom: 0;
-      &.popular__item-bottom {
-        padding-top: 15px;
-        padding-bottom: 15px;
-      }
     }
   }
 
@@ -29,7 +26,5 @@
       visibility: visible;
       max-height: initial;
     }
-
-    
   }
 }

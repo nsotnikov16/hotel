@@ -16,7 +16,13 @@
 			@@include('html/services-home.html', {})
 
 			<!-- Наши номера -->
-			@@include('html/rooms-swiper.html', {})
+			<section class="section">
+				<div class="page__container">
+					<p class="section__subtitle">У нас уютно</p>
+					<h2 class="section__title">У нас уютно</h2>
+					@@include('html/rooms-swiper.html', {})
+				</div>
+			</section>
 
 			<!-- Акции -->
 			<section class="section" style="padding-top: 0">
@@ -26,7 +32,7 @@
 					@@include('html/stocks.html', {})
 				</div>
 			</section>
-		
+
 		</main>
 		<!-- Подвал -->
 		@@include('html/footer.html', {})

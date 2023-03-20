@@ -1,0 +1,39 @@
+.services {
+    &__title {
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 130%;
+    }
+    &__list {
+        margin: 20px 0 30px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 230px);
+        gap: 10px;
+    }
+
+    &__item {
+        background: #fffefc;
+        border: 2px solid $hr;
+        border-radius: 50px;
+
+        a {
+            display: flex;
+            padding: 10px;
+            align-items: center;
+        }
+    }
+
+    &__img {
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        object-fit: contain;
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 140%;
+        margin-left: 15px;
+    }
+}

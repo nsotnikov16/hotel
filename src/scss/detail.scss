@@ -1,0 +1,196 @@
+.detail {
+    &__container {
+        display: grid;
+        grid-template-columns: 58% 1fr;
+        gap: 40px 60px;
+    }
+
+    &__photos {
+        height: fit-content;
+    }
+
+    &__swiper {
+        border-radius: 10px;
+        height: 562px;
+
+        .swiper-pagination-fraction {
+            color: white;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            background: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            &::after {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__swiper-thumbs {
+        margin-top: 10px;
+        height: 130px;
+
+        .swiper-slide {
+            border-radius: 6.5px;
+            overflow: hidden;
+            border: none;
+            transition: border 0.15s ease-in-out;
+            cursor: pointer;
+            &-thumb-active {
+                position: relative;
+                border: 3px solid $blue;
+            }
+        }
+    }
+
+    &__photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        z-index: 1;
+        position: relative;
+    }
+
+    &__info {
+        grid-row: 1/3;
+        grid-column: 2/3;
+
+        .content {
+            margin-top: 30px;
+        }
+    }
+
+    &__detailed {
+        margin-top: 20px;
+    }
+
+    &__price {
+    }
+
+    &__contact {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        .btn {
+            padding: 14px 30px;
+        }
+    }
+
+    &__tel {
+        display: flex;
+        svg {
+            width: 16px;
+            height: 16px;
+            margin-right: 16px;
+        }
+        margin-left: 50px;
+        text-decoration: underline;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    &__add {
+    }
+
+    &__links {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        > * {
+            margin-bottom: 5px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .content {
+        
+
+        h3 {
+            padding: 15px 0 10px;
+        }
+    }
+
+    &__spoiler {
+        border-radius: 30px;
+        border: 2px solid $hr;
+        .spoiler-top {
+            padding-top: 21px;
+            padding-bottom: 21px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 140%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &::after {
+                content: "";
+                display: inline-block;
+                margin-left: 12px;
+                background-image: url(../img/arrow.svg);
+                width: 7px;
+                height: 14px;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                transform: rotate(90deg) translateY(1px);
+                filter: brightness(0%);
+                transition: transform 0.2s ease-in;
+            }
+        }
+
+        .spoiler-bottom {
+            height: fit-content;
+        }
+
+        &.spoiler-open {
+            .spoiler-top {
+                &::after {
+                    transform: rotate(-90deg) translateY(1px);
+                }
+            }
+        }
+     
+
+        .spoiler-top,
+        &.spoiler-open .spoiler-bottom {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
+
+.link-3d {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+    background: linear-gradient(0deg, rgba(23, 23, 38, 0.6), rgba(23, 23, 38, 0.6));
+    &:hover {
+        background: linear-gradient(0deg, rgba(23, 23, 38, 0.6), rgba(23, 23, 38, 1));
+    }
+
+    svg {
+        width: 40px;
+        height: 40px;
+    }
+}
