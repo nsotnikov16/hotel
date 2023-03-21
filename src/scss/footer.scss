@@ -51,6 +51,10 @@
             font-size: 16px;
             line-height: 140%;
             color: $gray;
+            transition: color 0.2s ease-in;
+            &:hover {
+                color: $blue;
+            }
         }
     }
 

@@ -20,6 +20,12 @@
             display: flex;
             padding: 10px;
             align-items: center;
+
+            &:hover {
+                .services__name {
+                    color: $blue;
+                }
+            }
         }
     }
 
@@ -35,5 +41,6 @@
         font-size: 16px;
         line-height: 140%;
         margin-left: 15px;
+        transition: color 0.2s ease-in;
     }
 }

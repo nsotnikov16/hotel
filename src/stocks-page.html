@@ -1,0 +1,30 @@
+@@include('html/head.html', {"title": "Акции", "dop": ""})
+
+<body>
+    <div class="page">
+        <!-- Шапка -->
+        @@include('html/header.html', {})
+        <main>
+            @@include('html/breadcrumbs.html', {"link": "Акции", "add": ""})
+            <div class="page__container">
+                @@include('html/stocks_grid.html')
+            </div>
+            <!-- Другие номера -->
+            <section class="section">
+                <div class="page__container">
+                    <h2 class="section__title">Другие номера</h2>
+                    @@include('html/rooms-swiper.html', {})
+                </div>
+            </section>
+        </main>
+        <!-- Подвал -->
+        @@include('html/footer.html', {})
+
+        <!-- Модалки -->
+        @@include('html/popups.html', {})
+    </div>
+
+    @@include('html/scripts.html', {})
+</body>
+
+</html>

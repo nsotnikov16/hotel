@@ -6,7 +6,17 @@
     }
 
     &__photos {
+        position: relative;
         height: fit-content;
+        iframe:not(.detail__swiper iframe) {
+            height: 605px;
+        }
+
+        .stocks__item-labels {
+            bottom: initial;
+            left: 30px;
+            top: 25px;
+        }
     }
 
     &__swiper {
@@ -113,11 +123,7 @@
     }
 
     .content {
-        
-
-        h3 {
-            padding: 15px 0 10px;
-        }
+       
     }
 
     &__spoiler {

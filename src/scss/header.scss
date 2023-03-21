@@ -31,10 +31,14 @@
             font-weight: 600;
             font-size: 16px;
             line-height: 140%;
+            transition: color 0.2s ease-in;
         
-            &.active,
-            &:hover {
+            &.active {
                 border-bottom: 2px solid #08a3ea;
+            }
+
+            &:hover {
+                color: $blue;
             }
         }
     }

@@ -1,0 +1,84 @@
+@@include('html/head.html', {"title": "Комфорт", "dop": ""})
+
+<body>
+    <div class="page">
+        <!-- Шапка -->
+        @@include('html/header.html', {})
+        <main>
+            @@include('html/breadcrumbs.html', {"link": "Специальный тариф «Свадебный»", "add": "<li><a href='./stocks-page.html'>Акции</a></li>"})
+
+            <div class="detail section" style="padding-top: 0">
+                <div class="page__container detail__container">
+                    <div class="detail__photos">
+                        <div class="stocks__item-labels">
+                            <div class="btn">Скидка 10%</div>
+                            <div class="btn">Еще лейбл</div>
+                        </div>
+                        <div class="detail__swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/stocks/11.png" class="detail__photo">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/rooms/detail.png" class="detail__photo">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/rooms/33.png" class="detail__photo">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/rooms/22.png" class="detail__photo">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="detail__swiper-thumbs swiper" thumbsSlider="">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/stocks/11.png" class="detail__photo">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/rooms/detail.png" class="detail__photo">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/rooms/33.png" class="detail__photo">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/rooms/22.png" class="detail__photo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail__info">
+                        <h1 class="page__title">«Свадебный»</h1>
+                        <div class="content">
+                            <p>
+                                <font color="#828299">Специальный тариф</font>
+                            </p>
+                            <br>
+                            <h3>Экономия 30%</h3>
+                            <p>Для молодоженов двухкомнатный номер категории КОМФОРТ за 4 500 рублей, завтрак для двоих
+                                в подарок!*</p>
+                            <ul>
+                                <li>действует для молодоженов</li>
+                                <li>наличие документов, (паспорт)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+        <!-- Подвал -->
+        @@include('html/footer.html', {})
+
+        <!-- Модалки -->
+        @@include('html/popups.html', {})
+    </div>
+
+    @@include('html/scripts.html', {})
+</body>
+
+</html>

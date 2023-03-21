@@ -26,6 +26,11 @@
   font-weight: 600;
   font-size: 22px;
   line-height: 130%;
+  transition: color 0.2s ease-in;
+
+  &:hover {
+    color: $blue;
+  }
 }
 
 .logo {
@@ -75,8 +80,26 @@
   background: $blue;
   font-weight: 600;
   font-size: 16px;
+  border: 1px solid $blue;
   color: white;
   padding: 14px 22px;
+  transition: background-color 0.2s ease-in;
+
+  &:hover {
+    background: white;
+    color: $blue;
+
+    svg.icon-phone {
+      filter: initial;
+    }
+  }
+
+  svg.icon-phone {
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    filter: brightness(0) invert(1);
+  }
 }
 
 .btn-up {
@@ -137,6 +160,10 @@
     text-decoration-line: underline;
     margin-left: 50px;
     flex-shrink: 0;
+    transition: color 0.2s ease-in;
+    &:hover {
+      color: $blue;
+    }
   }
 }
 
