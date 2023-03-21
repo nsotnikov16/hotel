@@ -1,5 +1,7 @@
+
+
 // Lazyload
-const lazyImages = document.querySelectorAll('img[data-src], [data-srcset]')
+const lazyImages = document.querySelectorAll('[data-src], [data-srcset]')
 if (lazyImages.length > 0) {
     lazyImages.forEach(img => {
         function showImg() {
@@ -199,15 +201,17 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 
-const swiperRooms = new Swiper('.swiper.rooms', {
+const swiperRooms = new Swiper('.swiper.rooms-swiper', {
     slidesPerView: 4,
     spaceBetween: 10,
+    /* loop: true, */
+    freeMode: true,
     navigation: {
-        nextEl: '.swiper.rooms .swiper-button-next',
-        prevEl: '.swiper.rooms .swiper-button-prev',
+        nextEl: '.swiper.rooms-swiper .swiper-button-next',
+        prevEl: '.swiper.rooms-swiper .swiper-button-prev',
     },
     scrollbar: {
-        el: '.swiper.rooms .swiper-scrollbar',
+        el: '.swiper.rooms-swiper .swiper-scrollbar',
         draggable: true,
     },
 });
@@ -223,4 +227,61 @@ const swiperStocks = new Swiper('.swiper.stocks', {
         el: '.swiper.stocks .swiper-scrollbar',
         draggable: true,
     },
+    /*  loop: true, */
 });
+
+const roomPhotos = document.querySelectorAll('.room__photos')
+if (roomPhotos.length) {
+    roomPhotos.forEach(item => {
+        new Swiper(item, {
+            pagination: {
+                el: item.querySelector('.swiper-pagination'),
+                type: 'bullets',
+            },
+            /*   loop: true, */
+            on: {
+                init: function () {
+                    const bullets = item.querySelectorAll('.swiper-pagination-bullet')
+                    if (bullets.length > 0)
+                        bullets.forEach((bullet, index) => bullet.addEventListener('mouseover', () => this.slideTo(index)))
+                }
+            },
+        })
+
+        item.addEventListener('click', () => {
+            const dynamicEl = []
+            const photos = item.querySelectorAll('.room__photo')
+            photos.forEach(img => dynamicEl.push({ src: img.src }))
+            lightGallery(item, {
+                dynamic: true,
+                dynamicEl
+            })
+        })
+    })
+}
+
+
+
+const detailSwiperThumbs = new Swiper(".detail__swiper-thumbs", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+
+});
+const detailSwiper = new Swiper(".detail__swiper", {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".detail__swiper .swiper-button-next",
+        prevEl: ".detail__swiper .swiper-button-prev",
+    },
+    thumbs: {
+        swiper: detailSwiperThumbs,
+    },
+    pagination: {
+        el: '.detail__swiper .swiper-pagination',
+        type: 'fraction',
+    },
+});
+
+
