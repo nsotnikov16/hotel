@@ -19,7 +19,7 @@ if (lazyImages.length > 0) {
     })
 }
 
-
+// Одна высота для элементов по селектору или HTMLElement
 function setSameHeight(selector, elementsNode, noRepeatListener) {
     let column = 0
     const elements = selector ? document.querySelectorAll(selector) : elementsNode
