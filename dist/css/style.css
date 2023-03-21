@@ -2649,6 +2649,7 @@ body::-webkit-scrollbar-track {
 .footer {
   padding-top: 60px;
   border-top: 1px solid #ededf2;
+  background: white;
 }
 .footer__top {
   display: grid;
