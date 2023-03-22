@@ -2391,6 +2391,29 @@ body::-webkit-scrollbar-track {
   border-bottom: none;
 }
 
+.not-found {
+  padding-top: 0;
+  display: flex;
+  max-width: 710px;
+  margin: 0 auto;
+}
+.not-found .page__title {
+  margin-bottom: 25px;
+}
+.not-found .btn {
+  margin-top: 40px;
+}
+
+.politic-block {
+  padding: 20px 30px 30px;
+  border-radius: 30px;
+  background: #ffffff;
+  border: 2px solid #ededf2;
+}
+.politic-block .page__title {
+  margin-bottom: 30px;
+}
+
 /* Модалки */
 .popup {
   position: fixed;
