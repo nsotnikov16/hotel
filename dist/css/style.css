@@ -2404,6 +2404,16 @@ body::-webkit-scrollbar-track {
   margin-top: 40px;
 }
 
+.politic-block {
+  padding: 20px 30px 30px;
+  border-radius: 30px;
+  background: #ffffff;
+  border: 2px solid #ededf2;
+}
+.politic-block .page__title {
+  margin-bottom: 30px;
+}
+
 /* Модалки */
 .popup {
   position: fixed;

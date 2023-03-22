@@ -1,0 +1,29 @@
+@@include('html/head.html', {"title": "Бронирование", "dop": ""})
+
+<body>
+    <div class="page">
+        <!-- Шапка -->
+        @@include('html/header.html', {})
+        <main>
+            @@include('html/breadcrumbs.html', {"link": "Бронирование", "add": ""})
+            <div class="page__container section" style="padding-top: 0;">
+                <h1 class="page__title">Бронирование номера</h1>
+                <div class="content" style="max-width: 1150px">
+                    <br>
+                    <p>С помощью приведенной ниже формы вы можете забронировать наши номера в режиме онлайн и получить
+                        гарантированную бронь. Для оплаты вы можете использовать банковскую карту, безналичный расчет
+                        либо оплатить заказ на месте.</p>
+                </div>
+            </div>
+        </main>
+        <!-- Подвал -->
+        @@include('html/footer.html', {})
+
+        <!-- Модалки -->
+        @@include('html/popups.html', {})
+    </div>
+
+    @@include('html/scripts.html', {})
+</body>
+
+</html>

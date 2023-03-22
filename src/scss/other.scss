@@ -196,11 +196,9 @@
   max-width: 710px;
   margin: 0 auto;
   > img {
-   
   }
 
   > div {
-
   }
 
   .page__title {
@@ -209,5 +207,16 @@
 
   .btn {
     margin-top: 40px;
+  }
+}
+
+.politic-block {
+  padding: 20px 30px 30px;
+  border-radius: 30px;
+  background: #ffffff;
+  border: 2px solid $hr;
+
+  .page__title {
+    margin-bottom: 30px;
   }
 }
