@@ -6,6 +6,7 @@
     &__left {
         width: 48.2%;
         position: relative;
+        max-height: 786px;
     }
 
     &__right {
@@ -40,5 +41,10 @@
         position: absolute;
         bottom: -50px;
         left: 20px
+    }
+
+    
+    .content {
+        min-height: 675px;
     }
 }

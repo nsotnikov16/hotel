@@ -202,8 +202,23 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
 const swiperRooms = new Swiper('.swiper.rooms-swiper', {
-    slidesPerView: 4,
-    spaceBetween: 10,
+  
+    breakpoints: {
+        1400: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+        },
+
+        1025: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+
+        680: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        }
+    },
     /* loop: true, */
     freeMode: true,
     navigation: {
@@ -217,8 +232,20 @@ const swiperRooms = new Swiper('.swiper.rooms-swiper', {
 });
 
 const swiperStocks = new Swiper('.swiper.stocks', {
-    slidesPerView: 3,
-    spaceBetween: 10,
+    
+
+    breakpoints: {
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+
+        680: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        }
+    },
+
     navigation: {
         nextEl: '.swiper.stocks .swiper-button-next',
         prevEl: '.swiper.stocks .swiper-button-prev',
