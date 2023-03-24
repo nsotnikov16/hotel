@@ -12,7 +12,8 @@
     &__photos {
         width: 100%;
         height: 100%;
-        max-height: 315px;
+        /* max-height: 315px; */
+        max-height: 100%;
         border-radius: 10px 0 0 10px;
         overflow: hidden;
 
@@ -41,6 +42,10 @@
                     height: 430px;
                     width: 100%;
                     opacity: 0;
+
+                    @media (max-width: 1024px) {
+                        height: 4px;
+                    }
                 }
             }
 
@@ -52,6 +57,8 @@
 
     &__photo {
         height: 100%;
+        width: 100%;
+        object-fit: contain;
     }
 
     &__info {
@@ -135,6 +142,7 @@
         font-size: 20px;
         line-height: 140%;
         color: $gray;
+        text-align: center;
     }
 
     &__btn {
@@ -148,5 +156,57 @@
         font-size: 16px;
         line-height: 140%;
         text-decoration: underline;
+    }
+
+    @media (max-width: 1280px) {
+        grid-template-columns: 40% 1fr;
+        border-left: 2px solid $hr;
+        &__right {
+            grid-column: 1/3;
+        }
+
+        &__info {
+            border-right: none;
+        }
+
+        &__photo {
+            object-fit: cover;
+        }
+    }
+
+    @media (max-width: 990px) {
+        grid-template-columns: 1fr;
+
+        &__right {
+            grid-column: initial;
+            padding-top: 0;
+        }
+
+        &__photos {
+            border-radius: 10px;
+        }
+    }
+
+    @media (max-width: 580px) {
+        &__info {
+            padding: 20px;
+        }
+
+        &__includes {
+            ul {
+                li {
+                    padding: 15px;
+                    margin-right: 6px;
+                    svg {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+        }
+
+        &__price, &__ratio {
+            display: inline-block;
+        }
     }
 }

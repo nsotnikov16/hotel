@@ -16,6 +16,10 @@
         border: 2px solid $hr;
         border-radius: 50px;
 
+        &:hover {
+            border-color: $blue;
+        }
+
         a {
             display: flex;
             padding: 10px;
@@ -42,5 +46,18 @@
         line-height: 140%;
         margin-left: 15px;
         transition: color 0.2s ease-in;
+    }
+
+    @media (max-width: 580px) {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+        &__name {
+            margin-left: 20px;
+        }
+
+        &__title {
+            font-size: 30px;
+        }
     }
 }

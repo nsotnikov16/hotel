@@ -67,4 +67,34 @@
             }
         }
     }
+
+    @media(max-width: 580px) {
+        overflow: visible;
+        .swiper-slide {
+            max-width: 334px;
+        }
+
+        &__item-img {
+            height: 178px;
+        }
+
+        &__item-title {
+            font-size: 16px;
+        }
+
+        &__item-bottom {
+            padding: 45px 30px 20px;
+        }
+
+        &__item-labels {
+            left: 30px;
+            right: 30px;
+        }
+
+        &_grid {
+            grid-template-columns: 1fr;
+            gap: 0;
+            margin-top: 0;
+        }
+    }
 }

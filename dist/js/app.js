@@ -247,7 +247,13 @@ const swiperStocks = new Swiper('.swiper.stocks', {
         680: {
             slidesPerView: 2,
             spaceBetween: 10,
+        },
+
+        320: {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
         }
+
     },
 
     navigation: {
@@ -294,11 +300,15 @@ if (roomPhotos.length) {
 
 
 const detailSwiperThumbs = new Swiper(".detail__swiper-thumbs", {
-    spaceBetween: 10,
-    slidesPerView: 4,
+
     freeMode: true,
     watchSlidesProgress: true,
-
+    breakpoints: {
+        581: {
+            spaceBetween: 10,
+            slidesPerView: 4,
+        }
+    },
 });
 const detailSwiper = new Swiper(".detail__swiper", {
     spaceBetween: 10,

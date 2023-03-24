@@ -2,6 +2,10 @@
     font-size: 18px;
     line-height: 140%;
 
+    @media(max-width: 580px) {
+        font-size: 16px;
+    }
+
     p {
         padding-bottom: 10px;
     }
@@ -29,6 +33,13 @@
                 height: 11px;
                 background-size: 6px 11px;
                 transform: translateY(1px);
+                flex-shrink: 0;
+            }
+
+            @media(max-width: 580px) {
+                font-weight: 600;
+
+                
             }
         }
 

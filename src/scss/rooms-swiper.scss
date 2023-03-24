@@ -67,4 +67,10 @@
             max-width: 334px;
         }
     }
+
+    @media(max-width: 580px) {
+        &__item-img {
+            height: 334px;
+        }
+    }
 }

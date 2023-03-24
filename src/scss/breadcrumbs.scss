@@ -4,6 +4,8 @@
     ul {
         display: flex;
         align-items: center;
+        overflow-x: auto;
+        padding-bottom: 10px;
     }
 
     li {
@@ -43,11 +45,25 @@
     a {
         font-size: 14px;
         color: $gray;
+        white-space: nowrap;
         &:hover {
             svg {
                 fill: $blue;
             }
             color: $blue;
+        }
+    }
+
+    @media(max-width: 580px) {
+        margin-top: 36px;
+        margin-bottom: 16px;
+
+        li {
+            margin-right: 20px;
+
+            &::after {
+                transform: translateX(10px);
+            }
         }
     }
 }
