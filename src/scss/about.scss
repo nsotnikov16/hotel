@@ -7,6 +7,7 @@
         width: 48.2%;
         position: relative;
         max-height: 786px;
+        overflow: hidden;
     }
 
     &__right {
@@ -32,7 +33,7 @@
     &__svg1 {
         position: absolute;
         z-index: 1;
-        
+
         right: -90px;
         top: 70px;
         z-index: 1;
@@ -40,11 +41,92 @@
     &__svg2 {
         position: absolute;
         bottom: -50px;
-        left: 20px
+        left: 20px;
     }
 
-    
+    &__more {
+        display: none;
+
+        align-items: center;
+        font-weight: 600;
+        font-size: 18px;
+        margin-top: 10px;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 15px;
+            top: -16px;
+            left: 0;
+            right: 0;
+            background: linear-gradient(0deg, rgba(255, 255, 255, 1) 72%, rgba(255, 255, 255, 0.4) 95%);
+        }
+
+        svg {
+            width: 18px;
+            height: 10px;
+            display: block;
+            flex-shrink: 0;
+            transform: rotate(90deg);
+            margin-left: 5px;
+        }
+    }
+
     .content {
         min-height: 675px;
+    }
+
+    @media (max-width: 1279px) {
+        flex-direction: column;
+
+        &__left {
+            height: 786px;
+            width: 100%;
+            max-width: 660px;
+        }
+
+        &__right {
+            width: 100%;
+        }
+
+        .content {
+            min-height: initial;
+        }
+    }
+
+    @media (max-width: 580px) {
+        &__left {
+            height: 500px;
+            max-width: 350px;
+        }
+        &__photo1 {
+            max-width: 226px;
+        }
+
+        &__photo2 {
+            max-width: 210px;
+        }
+
+        &__svg1 {
+            right: -10px;
+            top: 80px;
+        }
+
+        &__svg2 {
+            bottom: 75px;
+        }
+
+        &__more {
+            display: flex;
+        }
+
+        .content {
+            max-height: 430px;
+            overflow: hidden;
+            transition: max-height 0.2s linear;
+        }
     }
 }

@@ -28,9 +28,9 @@
 
     &__logo {
         width: 300px;
-        height: 161px;
+        height: 193px;
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: 100% 100%;
     }
 
     &__nav-title {
@@ -103,7 +103,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 23px 0;
+        padding-top: 23px;
+        padding-bottom: 23px;
         border-top: 1px solid $hr;
     }
 
@@ -147,5 +148,84 @@
 
     .phone {
         display: block;
+    }
+
+    @media (max-width: 1280px) {
+        &__top {
+            grid-template-columns: 1fr max-content 1fr 1fr;
+            gap: 25px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &__top {
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+        }
+
+        &__col {
+            &:nth-child(2),
+            &:nth-child(3) {
+                justify-self: initial;
+            }
+
+            &_nav {
+                ul {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+
+        &__logo {
+            width: 155px;
+            height: 100px;
+        }
+    }
+
+    @media (max-width: 580px) {
+        padding-top: 40px;
+        &__top {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        &__bottom {
+            margin-top: 40px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+
+        &__copyright {
+            margin-right: 30px;
+        }
+
+        &__dev {
+            flex-direction: column;
+            align-items: flex-start;
+
+            &::after {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+
+        &__copyright,
+        &__dev {
+            width: 47%;
+        }
+
+        &__block-text {
+            font-size: 16px !important;
+        }
+
+        &__col_nav a,
+        &__col_logo div {
+            font-size: 14px;
+        }
+
+        &__col_logo div {
+            margin-top: 20px;
+        }
     }
 }

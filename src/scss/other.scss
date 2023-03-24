@@ -21,6 +21,25 @@
     background-size: cover;
     background-position: center;
   }
+
+  @media (max-width: 1024px) {
+    &_services {
+      background-position: left;
+    }
+  }
+
+  @media (max-width: 580px) {
+    &__subtitle {
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    padding: 45px 0 60px;
+  }
 }
 
 .phone {
@@ -32,10 +51,14 @@
   &:hover {
     color: $blue;
   }
+
+  @media (max-width: 580px) {
+    font-size: 18px;
+  }
 }
 
 .logo {
-  background-image: url(../img/logo.png);
+  background-image: url(../img/logo.svg);
   display: block;
 }
 
@@ -74,6 +97,7 @@
 }
 
 .btn {
+  width: max-content;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,6 +188,20 @@
     transition: color 0.2s ease-in;
     &:hover {
       color: $blue;
+    }
+  }
+
+  @media(max-width: 679px) {
+    &-arrows {
+      display: none;
+    }
+
+    .swiper-scrollbar-drag {
+      background: $blue;
+    }
+
+    &-more {
+      margin-left: 15px;
     }
   }
 }

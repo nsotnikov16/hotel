@@ -56,5 +56,15 @@
 
         .btn {
         }
+
+        
+    }
+
+    @media(max-width: 679px) {
+
+        overflow: visible;
+        .swiper-slide {
+            max-width: 334px;
+        }
     }
 }

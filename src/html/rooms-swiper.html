@@ -2,7 +2,7 @@
         <div class="rooms-swiper swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    @@include('rooms-swiper_item.html', {"img": "1.png", "name": "Комфорт", "desc":"Просторный одноместный номер из двух комнат с благоустроенной остекленной лоджией, площадью 34 м2. В номере возможно размещение на дополнительном месте", "price" :"от 4 100 ₽"})
+                    @@include('rooms-swiper_item.html', {"img": "1.png", "name": "Комфорт", "desc":"Просторный одноместный номер из двух комнат с благоустроенной остекленной лоджией, площадью 34 м2. <br><br>В номере возможно размещение на дополнительном месте", "price" :"от 4 100 ₽"})
                 </div>
                 <div class="swiper-slide">
                     @@include('rooms-swiper_item.html', {"img": "2.png", "name": "Студия", "desc": "Просторный однокомнатный номер с рабочей зоной и зоной отдыха, общей площадью 34 м2. Имеется выход на благоустроенную остекленную лоджию. В номере возможно размещение на дополнительном месте", "price" : "от 4 100 ₽"})
@@ -24,6 +24,6 @@
                     <div class="swiper-button-next"></div>
                 </div>
                 <div class="swiper-scrollbar"></div>
-                <a href="./rooms-page.html" class="swiper-bottom-more">Смотреть все номера</a>
+                <a href="./rooms-page.html" data-text-mobile="Все номера" class="swiper-bottom-more">Смотреть все номера</a>
             </div>
         </div>
