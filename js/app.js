@@ -68,6 +68,7 @@ const btnUp = {
 
 btnUp.addEventListener();
 
+const onLoadSvgAbout = img => window.innerWidth <= 580 && img.dataset.mobileSrc ? img.src = img.dataset.mobileSrc : ''
 
 //Спойлеры
 const spoilers = document.querySelectorAll('.spoiler')
@@ -202,7 +203,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
 const swiperRooms = new Swiper('.swiper.rooms-swiper', {
-  
+
     breakpoints: {
         1400: {
             slidesPerView: 4,
@@ -217,6 +218,11 @@ const swiperRooms = new Swiper('.swiper.rooms-swiper', {
         680: {
             slidesPerView: 2,
             spaceBetween: 10,
+        },
+
+        320: {
+            slidesPerView: 'auto',
+            spaceBetween: 10
         }
     },
     /* loop: true, */
@@ -232,8 +238,6 @@ const swiperRooms = new Swiper('.swiper.rooms-swiper', {
 });
 
 const swiperStocks = new Swiper('.swiper.stocks', {
-    
-
     breakpoints: {
         1024: {
             slidesPerView: 3,
@@ -243,7 +247,13 @@ const swiperStocks = new Swiper('.swiper.stocks', {
         680: {
             slidesPerView: 2,
             spaceBetween: 10,
+        },
+
+        320: {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
         }
+
     },
 
     navigation: {
@@ -290,11 +300,15 @@ if (roomPhotos.length) {
 
 
 const detailSwiperThumbs = new Swiper(".detail__swiper-thumbs", {
-    spaceBetween: 10,
-    slidesPerView: 4,
+
     freeMode: true,
     watchSlidesProgress: true,
-
+    breakpoints: {
+        581: {
+            spaceBetween: 10,
+            slidesPerView: 4,
+        }
+    },
 });
 const detailSwiper = new Swiper(".detail__swiper", {
     spaceBetween: 10,
@@ -312,3 +326,25 @@ const detailSwiper = new Swiper(".detail__swiper", {
 });
 
 
+const header = document.querySelector('.header')
+const headerMobile = header.querySelector('.header__mobile')
+const burger = header.querySelector('.header__burger')
+const copySelectors = ['.header__nav', '.header__contacts', '.header__add']
+burger.addEventListener('click', () => header.classList.toggle('header_open'))
+copySelectors.forEach(s => {
+    const el = header.querySelector(s)
+    if (!el) return
+    headerMobile.append(el.cloneNode(true))
+})
+
+const aboutHomeImages = document.querySelectorAll('.about img[data-mobile-src]')
+if (aboutHomeImages.length) aboutHomeImages.forEach(img => onLoadSvgAbout(img))
+const showAboutMore = (btn) => {
+    document.querySelector('.about .content').style.maxHeight = '100%'
+    btn.remove()
+}
+
+const elementsTextMobile = document.querySelectorAll('[data-text-mobile]')
+if (elementsTextMobile.length) elementsTextMobile.forEach(el => {
+    if (window.innerWidth <= 580 && el.dataset.textMobile) el.textContent = el.dataset.textMobile
+})

@@ -55,6 +55,14 @@
             </a>
             <a href="#" class="btn">Онлайн бронирование</a>
         </div>
+        <div class="header__rmobile">
+            <a href="tel:+73462285500"><svg>
+                    <use href="./img/icons/icons.svg#phone"></use>
+                </svg></a>
+            <div class="header__burger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
     </div>
 
     <div class="header__mobile">
@@ -100,7 +108,6 @@
                         <img class="room__photo" data-src="./img/rooms/55.png">
                     </div>
                 </div>
-                <!-- onclick="location.assign('./room-page.html')" -->
                 <div class="swiper-pagination"></div>
             </div>
             <div class="room__info">
@@ -126,14 +133,17 @@
                         <li><svg>
                                 <use href="./img/icons/icons.svg#cup"></use>
                             </svg></li>
-
+                        <!-- Думаю можно не выводить 3 точки.. не вижу смысла -->
                         <li>. . .</li>
                     </ul>
                 </div>
             </div>
             <div class="room__right">
-                <div class="room__price">от 4 100 ₽</div>
-                <div class="room__ratio">/ сутки</div>
+                <div>
+                    <div class="room__price">от 4 100 ₽</div>
+                    <div class="room__ratio">/ сутки</div>
+                </div>
+
                 <a href="#" class="btn room__btn">Забронировать онлайн</a>
                 <a href="./room-page.html" class="room__more">Подробнее о номере</a>
             </div>
@@ -157,7 +167,7 @@
                         <img class="room__photo" data-src="./img/rooms/55.png">
                     </div>
                 </div>
-                <!-- onclick="location.assign('./room-page.html')" -->
+
                 <div class="swiper-pagination"></div>
             </div>
             <div class="room__info">
@@ -189,8 +199,11 @@
                 </div>
             </div>
             <div class="room__right">
-                <div class="room__price">от 5 100 ₽</div>
-                <div class="room__ratio">/ сутки</div>
+                <div>
+                    <div class="room__price">от 5 100 ₽</div>
+                    <div class="room__ratio">/ сутки</div>
+                </div>
+
                 <a href="#" class="btn room__btn">Забронировать онлайн</a>
                 <a href="./room-page.html" class="room__more">Подробнее о номере</a>
             </div>
@@ -214,7 +227,7 @@
                         <img class="room__photo" data-src="./img/rooms/55.png">
                     </div>
                 </div>
-                <!-- onclick="location.assign('./room-page.html')" -->
+
                 <div class="swiper-pagination"></div>
             </div>
             <div class="room__info">
@@ -246,8 +259,11 @@
                 </div>
             </div>
             <div class="room__right">
-                <div class="room__price">от 4 100 ₽</div>
-                <div class="room__ratio">/ сутки</div>
+                <div>
+                    <div class="room__price">от 4 100 ₽</div>
+                    <div class="room__ratio">/ сутки</div>
+                </div>
+
                 <a href="#" class="btn room__btn">Забронировать онлайн</a>
                 <a href="./room-page.html" class="room__more">Подробнее о номере</a>
             </div>
@@ -332,7 +348,7 @@
             <div class="swiper-button-next"></div>
         </div>
         <div class="swiper-scrollbar"></div>
-        <a href="./stocks-page.html" class="swiper-bottom-more">Смотреть все акции</a>
+        <a href="./stocks-page.html" data-text-mobile="Все акции" class="swiper-bottom-more">Смотреть все акции</a>
     </div>
 </div>
                 </div>
@@ -391,7 +407,7 @@
         <a href="https://a1-reklama.ru" target="_blank" class="footer__dev">Сделано в </a>
     </div>
 </footer>
-<!-- <div class="btn-up btn-up_hide"></div> -->
+<div class="btn-up btn-up_hide"></div>
 
         <!-- Модалки -->
         

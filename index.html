@@ -55,6 +55,14 @@
             </a>
             <a href="#" class="btn">Онлайн бронирование</a>
         </div>
+        <div class="header__rmobile">
+            <a href="tel:+73462285500"><svg>
+                    <use href="./img/icons/icons.svg#phone"></use>
+                </svg></a>
+            <div class="header__burger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
     </div>
 
     <div class="header__mobile">
@@ -80,8 +88,8 @@
             <div class="about__left">
                 <img data-src="./img/about/1.png" class="about__photo1">
                 <img data-src="./img/about/2.png" class="about__photo2">
-                <img data-src="./img/about/3.svg" class="about__svg1">
-                <img data-src="./img/about/4.svg" class="about__svg2">
+                <img data-src="./img/about/3.svg" data-mobile-src="./img/about/3-2.svg" class="about__svg1">
+                <img data-src="./img/about/4.svg" data-mobile-src="./img/about/4-2.svg" class="about__svg2">
             </div>
             <div class="about__right">
                 <p class="section__subtitle">Об отеле</p>
@@ -118,6 +126,7 @@
                         пребывание
                         в Сургуте было максимально комфортным.</p>
                 </div>
+                <div class="about__more" onclick="showAboutMore(this)">Подробнее <svg><use href="./img/icons/icons.svg#arrow"></use></svg></div>
             </div>
         </div>
     </div>
@@ -198,7 +207,7 @@
 			<section class="section">
 				<div class="page__container">
 					<p class="section__subtitle">У нас уютно</p>
-					<h2 class="section__title">У нас уютно</h2>
+					<h2 class="section__title">Наши номера</h2>
 					
         <div class="rooms-swiper swiper">
             <div class="swiper-wrapper">
@@ -209,7 +218,7 @@
     </a>
     <div class="rooms-swiper__item-info">
         <a href="./room-page.html" class="rooms-swiper__item-title">Комфорт</a>
-        <p class="rooms-swiper__item-desc">Просторный одноместный номер из двух комнат с благоустроенной остекленной лоджией, площадью 34 м2. В номере возможно размещение на дополнительном месте</p>
+        <p class="rooms-swiper__item-desc">Просторный одноместный номер из двух комнат с благоустроенной остекленной лоджией, площадью 34 м2. <br><br>В номере возможно размещение на дополнительном месте</p>
         <div class="rooms-swiper__item-bottom">
             <a href="./room-page.html" class="btn">Подробнее</a>
             <p class="rooms-swiper__item-price">от 4 100 ₽</p>
@@ -285,7 +294,7 @@
                     <div class="swiper-button-next"></div>
                 </div>
                 <div class="swiper-scrollbar"></div>
-                <a href="./rooms-page.html" class="swiper-bottom-more">Смотреть все номера</a>
+                <a href="./rooms-page.html" data-text-mobile="Все номера" class="swiper-bottom-more">Смотреть все номера</a>
             </div>
         </div>
 
@@ -371,7 +380,7 @@
             <div class="swiper-button-next"></div>
         </div>
         <div class="swiper-scrollbar"></div>
-        <a href="./stocks-page.html" class="swiper-bottom-more">Смотреть все акции</a>
+        <a href="./stocks-page.html" data-text-mobile="Все акции" class="swiper-bottom-more">Смотреть все акции</a>
     </div>
 </div>
 				</div>
@@ -430,7 +439,7 @@
         <a href="https://a1-reklama.ru" target="_blank" class="footer__dev">Сделано в </a>
     </div>
 </footer>
-<!-- <div class="btn-up btn-up_hide"></div> -->
+<div class="btn-up btn-up_hide"></div>
 
 		<!-- Модалки -->
 		
