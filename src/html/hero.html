@@ -3,6 +3,56 @@
         <h1>Гостиница ОБЬ -<br>
             cервис премиум класса
             в центре Сургута</h1>
+
+        <style>
+            #block-search,
+            #block-search * {
+                box-sizing: border-box;
+            }
+
+            #block-search {
+                background: rgba(255, 255, 255, 0.95);
+                border-radius: 10px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .tl-container {
+                padding: 8px 50px;
+            }
+        </style>
+        <!-- start TL Search form script -->
+        <div id='block-search'>
+            <div id='tl-search-form' class='tl-container'>
+                <noindex><a href='https://www.travelline.ru/products/tl-hotel/' rel='nofollow'
+                        target='_blank'>TravelLine</a></noindex>
+            </div>
+        </div>
+        <script type='text/javascript'>
+            (function (w) {
+                var q = [
+                    ['setContext', 'TL-INT-hotel-surgut_2023-03-24', 'ru'],
+                    ['embed', 'search-form', {
+                        container: 'tl-search-form'
+                    }]
+                ];
+                var h = ["ru-ibe.tlintegration.ru", "ibe.tlintegration.ru", "ibe.tlintegration.com"];
+                var t = w.travelline = (w.travelline || {}),
+                    ti = t.integration = (t.integration || {});
+                ti.__cq = ti.__cq ? ti.__cq.concat(q) : q;
+                if (!ti.__loader) {
+                    ti.__loader = true;
+                    var d = w.document, c = d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+                    function e(s, f) { return function () { w.TL || (c.removeChild(s), f()) } }
+                    (function l(h) {
+                        if (0 === h.length) return; var s = d.createElement("script");
+                        s.type = "text/javascript"; s.async = !0; s.src = "https://" + h[0] + "/integration/loader.js";
+                        s.onerror = s.onload = e(s, function () { l(h.slice(1, h.length)) }); c.appendChild(s)
+                    })(h);
+                }
+            })(window);
+        </script>
+        <!-- end TL Search form script -->
         <img src="./img/hero.png">
     </div>
 </div>
