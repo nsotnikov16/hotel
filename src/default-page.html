@@ -6,9 +6,12 @@
         @@include('html/header.html', {})
         <main>
             @@include('html/breadcrumbs.html', {"link": "Шаблон по умолчанию", "add": ""})
-            <div class="page__container">
-                <h1 class="page__title">Пример дефолтного шаблона страницы</h1>
-            </div>
+            <section class="section" style="padding-top: 0;">
+                <div class="page__container">
+                    <h1 class="page__title">Пример дефолтного шаблона страницы</h1>
+                </div>
+            </section>
+
         </main>
         <!-- Подвал -->
         @@include('html/footer.html', {})
